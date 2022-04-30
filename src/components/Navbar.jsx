@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import { NavLink } from "react-router-dom"
-//
 
 
 const Container = styled.div`
@@ -13,10 +11,10 @@ color: #E0C097;
 const Wrapper = styled.div`
 height: 100%;
 width: 100%;
-padding: 20px;
 display: flex;
 align-items: center;
 justify-content: space-between;
+padding: 0 3%;
 `
 // ${mobile({ padding: "10px 0px" })}
 
@@ -25,21 +23,12 @@ const Left = styled.div`
 flex: 1;
 display: flex;
 align-items: center;
-`
-
-
-const Center = styled.div`
-flex: 1;
-text-align: center;
-border-left: solid 1px white;
-border-right: solid 1px white;
-display: flex;
-justify-content: space-around;
+justify-content: flex-start;
 `
 const Logo = styled.h1`
 font-weight: bold;
 font-size: 15px;
-color: black
+color: black;
 `
 // ${mobile({ fontsize: "24px" })}
 
@@ -49,30 +38,34 @@ background-color: white;
 padding: 7px;
 `
 
+const Center = styled.div`
+flex: 1;
+text-align: center;
+border-left: solid 1px white;
+border-right: solid 1px white;
+display: flex;
+justify-content: space-around;
+`
+
 const Right = styled.div`
 flex: 1;
-display: flex;
-align-items: center;
-justify-content: flex-end;
 `
 // ${mobile({ flex: 2, justifyContent: "center" })}
 
-const navStyle = ({isActive}) =>{
-    return{
-    color:"white",
-    fontSize: "14px",
-    fontWeight: isActive ? "800" : "normal",
-    cursor: "pointer",
-    margin: " 0 10px 0 10px",
-    textDecoration: isActive ? "underline" : "none"
+const NavLink = styled.a`
+     color: white;
+     cursor: "pointer";
+     text-decoration: none;
+     transition: all 0.5s ease-in-out;
+
+     &:hover{
+    color: #FFBD35 ;
+    transform: scale(1.08) translate(0%, -5%);
 }
-
-}
-
-
+`
 // ${mobile({ fontSize: "12px", marginLeft: "5px" })}
 
-//
+
 const Navbar = () => {
 
   return (
@@ -87,17 +80,13 @@ const Navbar = () => {
          </Left>
 
          <Center>
-             <NavLink style={navStyle} to="/">HOME</NavLink>
-             <NavLink style={navStyle} to="/About">ABOUT</NavLink>
-             <NavLink style={navStyle} to="/Projects">PROJECTS</NavLink>
-             <NavLink style={navStyle} to="/Contact">CONTACT</NavLink>
+             <NavLink  href="#about">ABOUT</NavLink>
+             <NavLink  href="#projects">PROJECTS</NavLink>
+             <NavLink  href="#contact">CONTACT</NavLink>
          </Center>
 
         
-
-         <Right>
-            
-         </Right>
+         <Right></Right>
 
         </Wrapper>
     </Container>

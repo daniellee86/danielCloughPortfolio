@@ -3,10 +3,10 @@ import { keyframes } from 'styled-components'
 //
 import Navbar from "./Navbar"
 //
-import noise from "../images/noise.gif"
-import email from "../images/004-email.png"
-import resume from "../images/001-resume.png"
-import scroll from "../images/002-scroll.png"
+import noise from "../assets/noise.gif"
+import email from "../assets/004-email.png"
+import resume from "../assets/001-resume.png"
+import scroll from "../assets/002-scroll.png"
 
 const Container = styled.div`
     height: 100vh;
@@ -17,6 +17,8 @@ const Container = styled.div`
 const Wrapper = styled.div`
 flex-grow: 1;
 display: flex;
+padding: 3%;
+background-color: #1B1A17;
 `
 const Left = styled.div`
 flex: 1.2;
@@ -36,26 +38,26 @@ align-items: flex-start;
 
 //TITLE ANIMATION
 const TitleAnimation = keyframes`
-  0% {clip: rect(99px, 9999px, 45px, 0);}
-    5% { clip: rect(7px, 9999px, 49px, 0);}
+  0% {clip: rect(99px, 9999px, 70px, 0);}
+    5% { clip: rect(7px, 9999px, 120px, 0);}
     10% {clip: rect(52px, 9999px, 79px, 0);}
-    15% {clip: rect(51px, 9999px, 42px, 0);}
+    15% {clip: rect(51px, 9999px, 42px, 23px);}
     20% {clip: rect(37px, 9999px, 43px, 0)}
     25% {clip: rect(38px, 9999px, 9px, 0);}
-    30% {clip: rect(34px, 9999px, 93px, 0);}
-    35% {clip: rect(18px, 9999px, 84px, 0);}
+    30% {clip: rect(34px, 9999px, 140px, 0);}
+    35% {clip: rect(18px, 9999px, 84px, 72px);}
     40% {clip: rect(100px, 9999px, 75px, 0);}
     45% {clip: rect(15px, 9999px, 4px, 0);}
     50% {clip: rect(14px, 9999px, 10px, 0);}
-    55% {clip: rect(4px, 9999px, 75px, 0);}
+    55% {clip: rect(4px, 9999px, 75px, 150px);}
     60% {clip: rect(17px, 9999px, 55px, 0);}
     65% {clip: rect(75px, 9999px, 57px, 0);}
     70% {clip: rect(39px, 9999px, 84px, 0);}
-    75% {clip: rect(96px, 9999px, 54px, 0);}
-    80% {clip: rect(45px, 9999px, 25px, 0);}
-    85% {clip: rect(60px, 9999px, 100px, 0);}
+    75% {clip: rect(96px, 9999px, 94px, 0);}
+    80% {clip: rect(45px, 9999px, 25px, 500px);}
+    85% {clip: rect(60px, 9999px, 117px, 0);}
     90% {clip: rect(5px, 9999px, 6px, 0);  }
-    95% {clip: rect(49px, 9999px, 57px, 0); }
+    95% {clip: rect(49px, 9999px, 73px, 0); }
     100% {clip: rect(54px, 9999px, 90px, 0); }
 `
 
@@ -64,18 +66,19 @@ const HeaderTitleOne = styled.h1`
 font-size: 120px;
 font-family: 'Montserrat', sans-serif;
 font-weight: 800;
-
+font-style: italic;
+color: #FFBD35 ;
 
 &:after { 
  content: attr(data-text);
   position: absolute;
   left: 5px;
-  text-shadow: -1px 0 red;
-  color: #E6D5B8;
+  text-shadow: -2px 0 #FA1E0E;
+  color: #FFBD35 ;
   background-color: #1B1A17;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  animation: ${TitleAnimation} 3s infinite linear alternate-reverse;
+  animation: ${TitleAnimation} 3.3s infinite linear alternate-reverse;
 };
 
 &:before { 
@@ -83,12 +86,12 @@ font-weight: 800;
   position: absolute;
   left: -5px;
   white-space: pre;
-  text-shadow: 1px 0 blue;
-  color: #E6D5B8;
+  text-shadow: 2px 0 #4E9F3D;
+  color: #FFBD35 ;
   background-color: #1B1A17;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
-  animation: ${TitleAnimation} 2s infinite linear alternate-reverse;
+  animation: ${TitleAnimation} 2.3s infinite linear alternate-reverse;
   };
 `
 
@@ -96,13 +99,15 @@ const HeaderTitleTwo = styled.h1`
 font-size: 120px;
 font-family: 'Montserrat', sans-serif;
 font-weight: 800;
+font-style: italic;
+color: #FFBD35 ;
 
 &:after { 
  content: attr(data-text);
   position: absolute;
   left: 5px;
-  text-shadow: -1px 0 red;
-  color: #E6D5B8;
+  text-shadow: -2px 0 #FA1E0E;
+  color: #FFBD35 ;
   background-color: #1B1A17;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
@@ -114,8 +119,8 @@ font-weight: 800;
   position: absolute;
   left: px;
   white-space: pre;
-  text-shadow: 1px 0 blue;
-  color: #E6D5B8;
+  text-shadow: 2px 0 #4E9F3D;
+  color: #FFBD35 ;
   background-color: #1B1A17;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
@@ -126,6 +131,8 @@ font-weight: 800;
 
 const SubTitle = styled.h2`
     font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
     margin-top: 20px;
     font-weight: 800;
     color:  #1B1A17;
@@ -154,6 +161,7 @@ z-index: 1;
 
 const Window = styled.div`
 border: solid 2px white;
+border-radius: 10px;
 `
 const WindowTop = styled.div`
 height: 40px;
@@ -176,7 +184,6 @@ const Noise = styled.div`
   background-size: cover;
   z-index: 0;
 `
-
 
 const TopLeft = styled.div`
   flex: 1;
@@ -230,12 +237,17 @@ const IconRight = styled.div`
 const Icon = styled.img`
 height: ${props => props.height};
 filter: invert(100%);
-margin-left: 10px;
+margin: 0 10px;
+transition: all 0.5s ease-in-out;
+
+&:hover{
+    transform:${props=>props.hoverscale} ;
+}
 `
 
 const Header = ({props}) => {
   return (
-    <Container>
+    <Container id="home">
     <Navbar/>
 
     <Wrapper>
@@ -281,8 +293,12 @@ const Header = ({props}) => {
 
     <IconContainer>
       <IconLeft>
-      <Icon src={email} height="35px"/>
-      <Icon src={resume} height="35px"/>
+      <Icon src={email} 
+      height="35px" 
+      hoverscale="scale(1.1)"/>
+      <Icon src={resume} 
+      height="35px" 
+      hoverscale="scale(1.1)"/>
       </IconLeft>
       <IconRight>
       <Icon src={scroll}  height="50px"/>
