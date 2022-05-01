@@ -130,10 +130,8 @@ const Text = styled.p`
 const InfoBottom = styled.div`
 height: 100%;
 width:100%;
-padding: 20px;
 background-color:#E6D5B8 ;
 display: flex;
-flex-direction: column;
 justify-content: center;
 align-items: center;
 `
@@ -159,15 +157,34 @@ top:-100%;
 right: 0;
 transition: 1s;
 z-index: 2;
+padding: 20px;
 display: flex;
 flex-direction: column;
-justify-content: center;
-align-items: center;
+justify-content: space-around;
+align-items: flex-start;
 
 ${Border}:hover & {
     top: 0;
   }
 `
+//
+const ContentLeft = styled.div`
+flex:1 ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
+const ContentRight = styled.div`
+flex:1 ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ `
+
+
 //
 const Icon = styled.img`
 height: ${props => props.height};
@@ -224,19 +241,31 @@ const About = () => {
       <Border>
 
       <TextOverlayBottom>
-                 <TextTitle color="#E6D5B8">THINGS I LOVE:</TextTitle>
-                     <Text color="#E6D5B8">Good Ramen.</Text>
-                     <Text color="#E6D5B8">Board Games.</Text>
-                     <Text color="#E6D5B8">The Outdoors.</Text>
-               </TextOverlayBottom>
-
-      <InfoBottom>
-      <TextTitle color="#1B1A17">CODE FRIENDS. </TextTitle>
-        <Text color="#1B1A17">
+      <TextTitle color="#E6D5B8">CODE<br/>FRIENDS: </TextTitle>
+        <Text color="#E6D5B8">
           Early in '22 I helped build a small online community of 
           developers that collaborate and meet twice weekly 
           to take part in pair and group programming sessions.
         </Text>
+      </TextOverlayBottom>
+
+      <InfoBottom>
+        <ContentLeft>
+                     <Text color="#1B1A17">HTML CSS JS</Text>
+                     <Text color="#1B1A17">REACT</Text>
+                     <Text color="#1B1A17">NODE.JS</Text>
+                     <Text color="#1B1A17">EXPRESS.JS</Text>
+                     <Text color="#1B1A17">AXIOS</Text>
+        </ContentLeft>
+        <ContentRight>
+                     <Text color="#1B1A17">REDUX</Text>
+                     <Text color="#1B1A17">REST API'S</Text>
+                     <Text color="#1B1A17">MONGO DB</Text>
+                     <Text color="#1B1A17">JWT</Text>
+                     <Text color="#1B1A17">STRIPE</Text>
+                    
+
+        </ContentRight>
       </InfoBottom>
 
       </Border>
