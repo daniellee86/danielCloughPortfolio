@@ -5,8 +5,9 @@ import Navbar from "./Navbar"
 //
 import noise from "../assets/noise.gif"
 import email from "../assets/004-email.png"
-import resume from "../assets/001-resume.png"
 import scroll from "../assets/002-scroll.png"
+import github from "../assetts/003-github.png"
+import linkedin from "../assetts/linkedin.png"
 
 const Container = styled.div`
     height: 100vh;
@@ -162,6 +163,7 @@ z-index: 1;
 const Window = styled.div`
 border: solid 2px white;
 border-radius: 10px;
+box-shadow: 5.5px 5px white;
 `
 const WindowTop = styled.div`
 height: 40px;
@@ -293,12 +295,9 @@ const Header = ({props}) => {
 
     <IconContainer>
       <IconLeft>
-      <Icon src={email} 
-      height="35px" 
-      hoverscale="scale(1.1)"/>
-      <Icon src={resume} 
-      height="35px" 
-      hoverscale="scale(1.1)"/>
+      <Icon src={linkedin} height="35px" hoverscale="scale(1.1)"/>
+      <Icon src={github} height="35px" hoverscale="scale(1.1)"/>
+      <Icon src={email} height="35px" hoverscale="scale(1.1)"/>
       </IconLeft>
       <IconRight>
       <Icon src={scroll}  height="50px"/>

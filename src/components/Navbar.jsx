@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import resume from "../assets/001-resume.png"
 
 
 const Container = styled.div`
@@ -49,6 +50,8 @@ justify-content: space-around;
 
 const Right = styled.div`
 flex: 1;
+display: flex;
+justify-content: flex-end;
 `
 // ${mobile({ flex: 2, justifyContent: "center" })}
 
@@ -64,6 +67,17 @@ const NavLink = styled.a`
 }
 `
 // ${mobile({ fontSize: "12px", marginLeft: "5px" })}
+
+const Icon = styled.img`
+height: 35px;
+filter: invert(100%);
+transition: all 0.5s ease-in-out;
+padding-top: 2px;
+
+&:hover{
+    transform:scale(1.1) ;
+}
+`
 
 
 const Navbar = () => {
@@ -86,7 +100,11 @@ const Navbar = () => {
          </Center>
 
         
-         <Right></Right>
+         <Right>
+         <a href="https://www.semrush.com/">
+         <Icon src={resume}/>
+         </a>
+         </Right>
 
         </Wrapper>
     </Container>

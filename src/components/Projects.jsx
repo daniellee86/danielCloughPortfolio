@@ -119,7 +119,8 @@ border-bottom: solid 1.5px #1B1A17;
 `
 
 const InfoMiddle = styled.div`
-border-bottom: solid 1.5px #1B1A17;`
+border-bottom: solid 1.5px #1B1A17;
+`
 
 const InfoBottom = styled.div`
 width: 100%;
@@ -136,7 +137,6 @@ const SubTitle = styled.h3`
   margin-bottom: 20px;
 `
 const Desc = styled.p`
-/* margin: 50px 0; */
 font-size: 15px;
 line-height: 1.5;
 margin-bottom: 20px;
