@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import resume from "../assets/001-resume.png"
+import cv from "../downloads/cv.pdf"
+
 
 
 const Container = styled.div`
@@ -79,6 +81,10 @@ padding-top: 2px;
 }
 `
 
+const A = styled.a`
+   text-decoration: none;
+`
+
 
 const Navbar = () => {
 
@@ -101,9 +107,12 @@ const Navbar = () => {
 
         
          <Right>
-         <a href="https://www.semrush.com/">
+         <A href={cv}
+        download="Daniel Clough Web Developer CV">
          <Icon src={resume}/>
-         </a>
+          </A>   
+  
+         
          </Right>
 
         </Wrapper>
@@ -114,3 +123,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

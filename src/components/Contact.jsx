@@ -11,7 +11,6 @@ const Container = styled.div`
     padding: 3%;
    background-color: #1B1A17;
 `
-
 const Wrapper = styled.div`
     height: 100%;
     width: 100%;

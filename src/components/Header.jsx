@@ -6,8 +6,9 @@ import Navbar from "./Navbar"
 import noise from "../assets/noise.gif"
 import email from "../assets/004-email.png"
 import scroll from "../assets/002-scroll.png"
-import github from "../assetts/003-github.png"
-import linkedin from "../assetts/linkedin.png"
+import linked from "../assets/linkedin.png"
+import git from "../assets/003-github.png"
+  
 
 const Container = styled.div`
     height: 100vh;
@@ -246,7 +247,9 @@ transition: all 0.5s ease-in-out;
     transform:${props=>props.hoverscale} ;
 }
 `
-
+const A = styled.a`
+   text-decoration: none;
+`
 const Header = ({props}) => {
   return (
     <Container id="home">
@@ -295,9 +298,9 @@ const Header = ({props}) => {
 
     <IconContainer>
       <IconLeft>
-      <Icon src={linkedin} height="35px" hoverscale="scale(1.1)"/>
-      <Icon src={github} height="35px" hoverscale="scale(1.1)"/>
-      <Icon src={email} height="35px" hoverscale="scale(1.1)"/>
+      <A href='https://linkedin.com/in/danielclough86' target="_blank"><Icon src={linked} height="35px" hoverscale="scale(1.1)"/></A>
+      <A href='https://github.com/daniellee86' target="_blank">  <Icon src={git} height="35px" hoverscale="scale(1.1)"/></A>
+      <A href="#contact"> <Icon src={email} height="35px" hoverscale="scale(1.1)"/></A>
       </IconLeft>
       <IconRight>
       <Icon src={scroll}  height="50px"/>
