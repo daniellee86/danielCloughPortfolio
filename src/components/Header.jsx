@@ -8,20 +8,21 @@ import email from "../assets/004-email.png"
 import scroll from "../assets/002-scroll.png"
 import linked from "../assets/linkedin.png"
 import git from "../assets/003-github.png"
-  
+//  
 
 const Container = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
 `
-
+//
 const Wrapper = styled.div`
 flex-grow: 1;
 display: flex;
 padding: 3%;
 background-color: #1B1A17;
 `
+//
 const Left = styled.div`
 flex: 1.2;
 display: flex;
@@ -30,6 +31,7 @@ align-items: center;
 color: #E6D5B8;
 background-color: #1B1A17;
 `
+//
 const LeftContent = styled.div`
 position: relative;
 display: flex;
@@ -96,7 +98,7 @@ color: #FFBD35 ;
   animation: ${TitleAnimation} 2.3s infinite linear alternate-reverse;
   };
 `
-
+//
 const HeaderTitleTwo = styled.h1`
 font-size: 120px;
 font-family: 'Montserrat', sans-serif;
@@ -129,7 +131,7 @@ color: #FFBD35 ;
   animation: ${TitleAnimation} 2.5s infinite linear alternate-reverse ;
   };
 `
-
+//
 
 const SubTitle = styled.h2`
     font-size: 35px;
@@ -140,7 +142,7 @@ const SubTitle = styled.h2`
     color:  #1B1A17;
     text-shadow: -2px 2px white;
 `
-
+//
 const Right = styled.div`
 flex:1;
 background-color: #1B1A17;
@@ -149,10 +151,10 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 `
-
+//
 const TextWrapper = styled.div`
 `
-
+//
 const HeaderText = styled.div`
 position: relative;
 font-size: 20px;
@@ -160,22 +162,24 @@ color: white;
 font-weight: 300;
 z-index: 1;
 `
-
+//
 const Window = styled.div`
 border: solid 2px white;
 border-radius: 10px;
 box-shadow: 5.5px 5px white;
 `
+//
 const WindowTop = styled.div`
 height: 40px;
 border-bottom: solid 2px white;
 display: flex;
 `
+//
 const WindowBottom = styled.div`
 position: relative;
 padding: 50px;
-
 `
+//
 const Noise = styled.div`
   position: absolute;
   height: 100%;
@@ -187,13 +191,14 @@ const Noise = styled.div`
   background-size: cover;
   z-index: 0;
 `
-
+//
 const TopLeft = styled.div`
   flex: 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
 `
+//
 const Button = styled.div`
   height: 15px;
   width: 15px;
@@ -206,7 +211,7 @@ const Button = styled.div`
               0 0 2.8rem ${props => props.color},
               inset 0 0 1.3rem ${props => props.color};
 `
-
+//
 const TopRight = styled.div`
   flex: 2;
   display: flex;
@@ -214,7 +219,7 @@ const TopRight = styled.div`
   align-items: center;
   border-left: solid 2px white;
 `
-
+//
 const Search = styled.div`
   height: 70%;
   width: 70%;
@@ -224,19 +229,20 @@ const Search = styled.div`
   justify-content: center;
   align-items: center;
 `
-
+//
 const IconContainer = styled.div`
   margin-top: 20px;
   width: 65%;
   display: flex;
   justify-content: space-between;
 `
+//
 const IconLeft = styled.div`
 `
-
+//
 const IconRight = styled.div`
 `
-
+//
 const Icon = styled.img`
 height: ${props => props.height};
 filter: invert(100%);
@@ -247,9 +253,13 @@ transition: all 0.5s ease-in-out;
     transform:${props=>props.hoverscale} ;
 }
 `
+//
 const A = styled.a`
    text-decoration: none;
 `
+//
+
+
 const Header = ({props}) => {
   return (
     <Container id="home">

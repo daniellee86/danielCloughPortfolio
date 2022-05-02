@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import resume from "../assets/001-resume.png"
+import resume from "../assets/icons8-cv-64.png"
 import cv from "../downloads/cv.pdf"
-
-
+//
 
 const Container = styled.div`
 height: 50px;

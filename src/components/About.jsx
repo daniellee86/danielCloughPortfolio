@@ -175,7 +175,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 `
-
+//
 const ContentRight = styled.div`
 flex:1 ;
 display: flex;
@@ -183,8 +183,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
  `
-
-
 //
 const Icon = styled.img`
 height: ${props => props.height};
@@ -211,7 +209,7 @@ const About = () => {
                      <Text color="#E6D5B8">Dynamic communication, technical and non-technical. Ability to discuss technicalities whilst also being
                      empathetic, understanding and a good team member.</Text>
                      <Text color="#E6D5B8">A refined approach to development; best practices, research, resillience and knowing when and how to ask for help.</Text>
-               </TextOverlay>
+                </TextOverlay>
 
                  <Content>
                   <TextTitle color="#1B1A17"> 
@@ -227,12 +225,16 @@ const About = () => {
                   of a team.
                   </Text>
                  </Content>
+                 
              </ContentContainer>
            </InfoContainer>
          </AboutInfo>
 
             <AboutBackground>AB</AboutBackground>
       </TopText>
+
+
+
 
       <BottomText>
       <AboutBackground>OUT</AboutBackground>
