@@ -146,6 +146,7 @@ const Desc = styled.p`
 font-size: 15px;
 line-height: 1.5;
 margin-bottom: 20px;
+white-space: pre-wrap;
 `
 //
 const Icon = styled.img`
@@ -173,9 +174,9 @@ const Projects = () => {
    //SLIDER FUNCTION; MOVES THE WRAPPER slideIndex * slide width(80vw)  
     const handleClick = (direction)=> {
         if (direction==="left") {
-            setSlideIndex(slideIndex > 0 ? slideIndex -1 : 2 ) 
+            setSlideIndex(slideIndex > 0 ? slideIndex -1 : 3 ) 
         } else {
-            setSlideIndex(slideIndex < 2 ? slideIndex +1 : 0 )
+            setSlideIndex(slideIndex < 3 ? slideIndex +1 : 0 )
         } }
 
     //USE EFFECT FOR SLIDE IMAGE CHANGE ON HOVER     
@@ -231,13 +232,14 @@ const Projects = () => {
                   </InfoMiddle>
              
                   <InfoBottom>
-                    <Icon src={internet}/>
-                    <Icon src={github}/>
+                   <a href={item.url[0]} target="_blank" rel="noreferrer" ><Icon src={internet}/></a> 
+                   <a href={item.url[1]} target="_blank" rel="noreferrer" ><Icon src={github}/></a> 
                     <Pointer src={arrow}/>
                   </InfoBottom>
                 </Info>
             </InfoContainer>
             
+
             </Slide>
             ))}
 
