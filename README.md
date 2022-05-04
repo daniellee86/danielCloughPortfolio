@@ -1,1 +1,1 @@
-![portfolio](./images/portfolio.png?raw=true "portfolio")
+<img src="./images/portfolio.png" alt="full size portfolio image">

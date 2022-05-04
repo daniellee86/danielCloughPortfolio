@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import emailjs from 'emailjs-com'
 import {useState} from 'react'
+import { Link } from "react-scroll"
 import { init } from 'emailjs-com';
 init('K-cYWtuOULleJE9t4');
 //
@@ -248,7 +249,9 @@ const Contact = () => {
                   </InfoMiddle>
              
                   <InfoBottom>
-                  <a href='#home'><Button>SCROLL UP</Button></a>
+                  <Link to="home" spy={true} smooth={true} offset={0} duration={1000} >   
+                  <Button>SCROLL UP</Button>
+                  </Link>
                   </InfoBottom>
 
                   </ContentLeft>

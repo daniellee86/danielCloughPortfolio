@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { keyframes } from 'styled-components'
+import { Link } from 'react-scroll'
 //
 import Navbar from "./Navbar"
 //
@@ -310,7 +311,10 @@ const Header = ({props}) => {
       <IconLeft>
       <A href='https://linkedin.com/in/danielclough86' target="_blank"><Icon src={linked} height="35px" hoverscale="scale(1.1)"/></A>
       <A href='https://github.com/daniellee86' target="_blank">  <Icon src={git} height="35px" hoverscale="scale(1.1)"/></A>
-      <A href="#contact"> <Icon src={email} height="35px" hoverscale="scale(1.1)"/></A>
+    
+      <Link to="contact" spy={true} smooth={true} offset={0} duration={1000} >
+      <Icon src={email} height="35px" hoverscale="scale(1.1)"/>
+      </Link>
       </IconLeft>
       <IconRight>
       <Icon src={scroll}  height="50px"/>

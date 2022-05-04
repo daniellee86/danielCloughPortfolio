@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import resume from "../assets/icons8-cv-64.png"
 import cv from "../downloads/cv.pdf"
+import { Link } from "react-scroll"
 //
 
 const Container = styled.div`
@@ -56,7 +57,7 @@ justify-content: flex-end;
 `
 // ${mobile({ flex: 2, justifyContent: "center" })}
 
-const NavLink = styled.a`
+const LinkText = styled.p`
      color: white;
      cursor: "pointer";
      text-decoration: none;
@@ -99,9 +100,9 @@ const Navbar = () => {
          </Left>
 
          <Center>
-             <NavLink  href="#about">ABOUT</NavLink>
-             <NavLink  href="#projects">PROJECTS</NavLink>
-             <NavLink  href="#contact">CONTACT</NavLink>
+             <Link to="about" spy={true} smooth={true} offset={0} duration={1000} ><LinkText>ABOUT</LinkText></Link>
+             <Link to="projects" spy={true} smooth={true} offset={0} duration={1000} ><LinkText>WORK</LinkText></Link>
+             <Link to="contact" spy={true} smooth={true} offset={0} duration={1000} ><LinkText>CONTACT</LinkText></Link>
          </Center>
 
         
