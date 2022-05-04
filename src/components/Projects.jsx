@@ -186,7 +186,7 @@ const Projects = () => {
         const timer = setInterval(() => {
           // cycle prevCount using mod instead of checking for hard-coded length
           setCount((prevCount) => (prevCount + 1) % images[slideIndex].length);
-        }, 300);
+        }, 500);
         // automatically clear timer the next time this effect is fired or
         // the component is "unmounted"
         return () => clearInterval(timer);
