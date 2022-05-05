@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import noise from "../assets/noise.gif"
 import click from "../assets/click.png"
+import { mobile} from "../responsive"
 //
 const Noise = styled.div`
   position: absolute;
@@ -23,6 +24,7 @@ position: relative;
     justify-content: center;
     background-color: black;
     padding: 3%;
+    ${mobile({ height: "100vh"})}  
 `
 //
 const AboutWrapper = styled.div`
@@ -36,6 +38,7 @@ justify-content: center;
 align-items: center;
 /* overflow: hidden; */
 padding: 20px;
+${mobile({ justifyContent: "center"})}
 `
 //
 const AboutBackground = styled.h1`
@@ -44,12 +47,14 @@ color: #FFBD35;
 text-shadow: -7px 5px #E6D5B8;
 font-family: 'Montserrat', sans-serif;
 font-weight: 600;
+${mobile({ display: "none"})}
 `
 //
 const TopText = styled.div`
 width: 100%;
 display: flex;
 justify-content: space-between;
+${mobile({ height: "98%"})}
 `
 //
 const BottomText = styled.div`
@@ -65,6 +70,7 @@ position: relative;
   padding: 0 40px;
   display: flex;
   align-items: flex-end; 
+  ${mobile({ padding: "0" })}
 `
 //
 const CircleTop = styled.div`
@@ -76,6 +82,7 @@ position: absolute;
 top: 60px;
 left: -15px;
 z-index: -1;
+${mobile({ display: "none"})}
 `
 //
 const InfoContainer = styled.div`
@@ -83,6 +90,7 @@ height: 75%;
 width: 100%;
 box-shadow: -7px 7px #E6D5B8;
 border: solid 1.5px #E6D5B8;
+${mobile({ height: "100%"})}
 `
 //
 const ContentContainer = styled.div`
@@ -110,14 +118,21 @@ ${ContentContainer}:hover & {
   }
 `
 //
-const Content = styled.div`padding: 20px 50px;
-background-color: #E6D5B8;
+const Content = styled.div`
 padding: 20px 50px;
+background-color: #E6D5B8;
+${mobile({ 
+  padding: "10px 25px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-around"
+   })}  
 `
 //
 const TextTitle = styled.h3`
   font-weight: 400;
   color: ${props=>props.color};
+  ${mobile({ fontSize: "20px" })}  
 `
 //
 const Text = styled.p`
@@ -125,6 +140,7 @@ const Text = styled.p`
   margin-top: 10px;
   line-height: 1.5;
   color: ${props=>props.color};
+  ${mobile({ fontSize: "13px" })}  
 `
 //
 const InfoBottom = styled.div`
@@ -146,6 +162,7 @@ border: solid 1.5px #E6D5B8;
   padding: 20px;
   margin: 0 65px 20px 0;
   overflow: hidden;
+  ${mobile({ display: "none" })}   
 `
 //
 const TextOverlayBottom = styled.div`
@@ -188,6 +205,7 @@ const Icon = styled.img`
 height: ${props => props.height};
 filter: invert(100%);
 margin-top: 20px;
+${mobile({ display: "none"})}
 `
 //
 

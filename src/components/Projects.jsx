@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { useState, useEffect } from "react"
 import { sliderItems, images } from "../data"
-// import { mobile } from "../responsive";
+import { mobile} from "../responsive";
 
 //ASSETTS
 import leftarrow from "../assets/left.png"
@@ -31,7 +31,6 @@ position: relative;
 overflow: hidden;
 background-color: #E6D5B8 ;
 `
-// ${mobile({ display: "none" })}
 //
 
 const Arrow = styled.div`
@@ -56,11 +55,20 @@ transition: all 0.5s ease-in-out;
 &:hover{
     background-color: #FFBD35;
 }
+
+${mobile({ 
+  height: "25px",
+  width: "25px"
+   })}
 `
 //
 const ArrowIcon = styled.img`
 width: 50px;
 height: 50px;
+${mobile({ 
+  height: "25px",
+  width: "25px"
+   })}  
 `
 //
 const Wrapper = styled.div`
@@ -76,6 +84,7 @@ height: 80vh;
 display: flex;
 align-items: center;
 padding: 20px;
+${mobile({ padding: "0" })}
 `
 //
 const ImgContainer = styled.div`
@@ -88,6 +97,7 @@ border-top: solid 1.5px black;
 border-bottom: solid 1.5px black;
 border-left: solid 1.5px black;
 background-color: #FFBD35 ;
+${mobile({ display: "none" })}
 `
 //
 const Image = styled.img`
@@ -99,12 +109,12 @@ object-fit: cover;
 const InfoContainer = styled.div`
 height: 100%;
 flex: 1;
-/* padding: 50px;  */
 background-color: #FFBD35 ;
 padding: 20px;
 border-top: solid 1.5px black;
 border-bottom: solid 1.5px black;
 border-right: solid 1.5px black;
+${mobile({ borderLeft: "solid 1.5px black" })}
 `
 //
 const Info = styled.div`
@@ -116,7 +126,8 @@ const Info = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-`
+    ${mobile({ justifyContent: "space-around" })}
+    `
 //
 const InfoTop = styled.div`
 border-bottom: solid 1.5px #1B1A17;
@@ -124,6 +135,7 @@ border-bottom: solid 1.5px #1B1A17;
 //
 const InfoMiddle = styled.div`
 border-bottom: solid 1.5px #1B1A17;
+${mobile({ display: "none" })}
 `
 //
 const InfoBottom = styled.div`
@@ -135,11 +147,16 @@ align-items: center;
 //
 const Title = styled.h1`
 font-weight: 600;
+${mobile({ fontSize: "20px" })}
 `
 //
 const SubTitle = styled.h3`
   font-weight: 400;
   margin-bottom: 20px;
+  ${mobile({ 
+    fontSize: "15px",
+    margin: "30px 0"
+    })}
 `
 //
 const Desc = styled.p`
@@ -147,6 +164,7 @@ font-size: 15px;
 line-height: 1.5;
 margin-bottom: 20px;
 white-space: pre-wrap;
+${mobile({ display: "none" })}
 `
 //
 const Icon = styled.img`
@@ -160,6 +178,7 @@ const Icon = styled.img`
 const Pointer = styled.img`
 height: 75px;
   transform: rotate(90deg) ;
+  ${mobile({ display: "none" })}
 `
 //
 

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { keyframes } from 'styled-components'
 import { Link } from 'react-scroll'
+import { mobile} from "../responsive"
 //
 import Navbar from "./Navbar"
 //
@@ -22,6 +23,7 @@ flex-grow: 1;
 display: flex;
 padding: 3%;
 background-color: #1B1A17;
+${mobile({ flexDirection: "column"})}
 `
 //
 const Left = styled.div`
@@ -39,6 +41,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: flex-start;
+${mobile({ alignItems: "center"})}
 `
 
 //TITLE ANIMATION
@@ -98,6 +101,8 @@ color: #FFBD35 ;
   clip: rect(0, 900px, 0, 0);
   animation: ${TitleAnimation} 2.3s infinite linear alternate-reverse;
   };
+
+  ${mobile({ fontSize: "60px"})}
 `
 //
 const HeaderTitleTwo = styled.h1`
@@ -131,6 +136,8 @@ color: #FFBD35 ;
   clip: rect(0, 900px, 0, 0);
   animation: ${TitleAnimation} 2.5s infinite linear alternate-reverse ;
   };
+
+  ${mobile({ fontSize: "60px"})}
 `
 //
 
@@ -142,6 +149,7 @@ const SubTitle = styled.h2`
     font-weight: 800;
     color:  #1B1A17;
     text-shadow: -2px 2px white;
+    ${mobile({ fontSize: "20px"})}
 `
 //
 const Right = styled.div`
@@ -151,9 +159,11 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+${mobile({ flex: "0.5" })}
 `
 //
 const TextWrapper = styled.div`
+${mobile({ display: "none"})}
 `
 //
 const HeaderText = styled.div`
@@ -236,12 +246,18 @@ const IconContainer = styled.div`
   width: 65%;
   display: flex;
   justify-content: space-between;
+  ${mobile({ 
+    width: "100%",
+    margin:"0",
+    justifyContent: "center"
+    })}
 `
 //
 const IconLeft = styled.div`
 `
 //
 const IconRight = styled.div`
+${mobile({ display: "none"})}
 `
 //
 const Icon = styled.img`

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import resume from "../assets/icons8-cv-64.png"
 import cv from "../downloads/cv.pdf"
 import { Link } from "react-scroll"
+import { mobile} from "../responsive"
 //
 
 const Container = styled.div`
@@ -9,7 +10,6 @@ height: 50px;
 background-color: #1B1A17;
 color: #E0C097;
 ` 
-// ${mobile({ height: "40px" })}
 
 const Wrapper = styled.div`
 height: 100%;
@@ -19,21 +19,19 @@ align-items: center;
 justify-content: space-between;
 padding: 0 3%;
 `
-// ${mobile({ padding: "10px 0px" })}
-
 
 const Left = styled.div`
 flex: 1;
 display: flex;
 align-items: center;
 justify-content: flex-start;
+${mobile({ display: "none" })}
 `
 const Logo = styled.h1`
 font-weight: bold;
 font-size: 15px;
 color: black;
 `
-// ${mobile({ fontsize: "24px" })}
 
 const LogoCircle = styled.div`
 border-radius: 50%;
@@ -48,6 +46,7 @@ border-left: solid 1px white;
 border-right: solid 1px white;
 display: flex;
 justify-content: space-around;
+${mobile({ flex: "4" })}
 `
 
 const Right = styled.div`
@@ -55,7 +54,6 @@ flex: 1;
 display: flex;
 justify-content: flex-end;
 `
-// ${mobile({ flex: 2, justifyContent: "center" })}
 
 const LinkText = styled.p`
      color: white;
@@ -68,7 +66,6 @@ const LinkText = styled.p`
     transform: scale(1.08) translate(0%, -5%);
 }
 `
-// ${mobile({ fontSize: "12px", marginLeft: "5px" })}
 
 const Icon = styled.img`
 height: 35px;

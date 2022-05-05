@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import emailjs from 'emailjs-com'
 import {useState} from 'react'
 import { Link } from "react-scroll"
+import { mobile } from "../responsive"
 import { init } from 'emailjs-com';
 init('K-cYWtuOULleJE9t4');
 //
@@ -37,6 +38,7 @@ justify-content: space-between;
 border-top: solid 1.5px white;
 border-bottom: solid 1.5px white;
 border-left: solid 1.5px white;
+${mobile({ display: "none"})}
 `
 //
 const InfoTop = styled.div`
@@ -86,6 +88,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
+${mobile({ borderLeft: "solid 1.5px white"})}
 `
 //
 const FormTop = styled.div`
@@ -102,6 +105,7 @@ width: 100%;
 margin-top: 10px;
 display: flex;
 align-items: center;
+${mobile({ marginTop: "20px"})}
 `
 //
 const FormBottom = styled.div`
@@ -157,11 +161,13 @@ const TextArea = styled.textarea`
     outline: none;
     border: solid 1.5px #FFBD35;
    }
+   ${mobile({ height: "100%"})}
 `
 //
 const Response = styled.span`
     display: ${props=>props.response};
     margin-top: 20px;
+    ${mobile({ fontSize: "10px"})}
 `
 //
 const Button = styled.button`
