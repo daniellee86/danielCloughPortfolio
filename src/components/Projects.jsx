@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { useState, useEffect } from "react"
 import { sliderItems, images } from "../data"
-import { mobile} from "../responsive";
+import { mobile, tablet} from "../responsive";
 
 //ASSETTS
 import leftarrow from "../assets/left.png"
@@ -60,6 +60,10 @@ ${mobile({
   height: "25px",
   width: "25px"
    })}
+ ${tablet({ 
+  height: "35px",
+  width: "35px"
+   })}  
 `
 //
 const ArrowIcon = styled.img`
@@ -68,7 +72,11 @@ height: 50px;
 ${mobile({ 
   height: "25px",
   width: "25px"
-   })}  
+   })} 
+  ${tablet({ 
+  height: "35px",
+  width: "35px"
+   })}     
 `
 //
 const Wrapper = styled.div`
@@ -127,6 +135,7 @@ const Info = styled.div`
     flex-direction: column;
     justify-content: space-between;
     ${mobile({ justifyContent: "space-around" })}
+    ${tablet({ justifyContent: "space-around" })}
     `
 //
 const InfoTop = styled.div`
@@ -136,6 +145,7 @@ border-bottom: solid 1.5px #1B1A17;
 const InfoMiddle = styled.div`
 border-bottom: solid 1.5px #1B1A17;
 ${mobile({ display: "none" })}
+${tablet({ display: "none" })}
 `
 //
 const InfoBottom = styled.div`
@@ -157,6 +167,10 @@ const SubTitle = styled.h3`
     fontSize: "15px",
     margin: "30px 0"
     })}
+  ${tablet({ 
+    fontSize: "15px",
+    margin: "30px 0"
+    })}
 `
 //
 const Desc = styled.p`
@@ -165,6 +179,7 @@ line-height: 1.5;
 margin-bottom: 20px;
 white-space: pre-wrap;
 ${mobile({ display: "none" })}
+${tablet({ display: "none" })}
 `
 //
 const Icon = styled.img`
@@ -179,6 +194,7 @@ const Pointer = styled.img`
 height: 75px;
   transform: rotate(90deg) ;
   ${mobile({ display: "none" })}
+  ${tablet({ display: "none" })}
 `
 //
 

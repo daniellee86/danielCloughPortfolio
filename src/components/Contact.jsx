@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import emailjs from 'emailjs-com'
 import {useState} from 'react'
 import { Link } from "react-scroll"
-import { mobile } from "../responsive"
+import { mobile, tablet } from "../responsive"
 import { init } from 'emailjs-com';
 init('K-cYWtuOULleJE9t4');
 //
@@ -65,17 +65,20 @@ const Title = styled.h1`
 font-family: 'Montserrat', sans-serif;
 font-weight: 600;
 font-size: 50px;
+${tablet({ fontSize: "40px"})}
 `
 //
 const SubTitle = styled.h2`
   font-weight: 300;
   margin-bottom: 20px;
+  ${tablet({ fontSize: "20px"})}
 `
 //
 const Desc = styled.p`
 font-size: 15px;
 line-height: 1.5;
 font-weight: 300;
+${tablet({ fontSize: "12px"})}
 `
 //
 const ContentRight = styled.div`
@@ -168,6 +171,7 @@ const Response = styled.span`
     display: ${props=>props.response};
     margin-top: 20px;
     ${mobile({ fontSize: "10px"})}
+    ${tablet({ fontSize: "12px"})}
 `
 //
 const Button = styled.button`

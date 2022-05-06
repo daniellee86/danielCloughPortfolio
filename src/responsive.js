@@ -7,4 +7,11 @@ return css`
   ${props}}
 `}
 
+export const tablet = (props) =>{
+  return css`
+  @media only screen and (max-width:820px) and (min-width:381px){
+    ${props}}
+  `}
+  
+
 

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import noise from "../assets/noise.gif"
 import click from "../assets/click.png"
-import { mobile} from "../responsive"
+import { mobile, tablet} from "../responsive"
 //
 const Noise = styled.div`
   position: absolute;
@@ -24,7 +24,6 @@ position: relative;
     justify-content: center;
     background-color: black;
     padding: 3%;
-    ${mobile({ height: "100vh"})}  
 `
 //
 const AboutWrapper = styled.div`
@@ -36,9 +35,11 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-/* overflow: hidden; */
 padding: 20px;
-${mobile({ justifyContent: "center"})}
+${tablet({ 
+  padding: "0",
+  justifyContent:"space-between"
+  })}
 `
 //
 const AboutBackground = styled.h1`
@@ -48,6 +49,7 @@ text-shadow: -7px 5px #E6D5B8;
 font-family: 'Montserrat', sans-serif;
 font-weight: 600;
 ${mobile({ display: "none"})}
+${tablet({ display: "none"})}
 `
 //
 const TopText = styled.div`
@@ -55,12 +57,14 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 ${mobile({ height: "98%"})}
+${tablet({ height: "50%"})}
 `
 //
 const BottomText = styled.div`
 width: 100%;
 display: flex;
 justify-content: space-between;
+${tablet({ justifyContent: "center"})}
 `
 //
 const AboutInfo = styled.div`
@@ -83,6 +87,7 @@ top: 60px;
 left: -15px;
 z-index: -1;
 ${mobile({ display: "none"})}
+${tablet({ top: "0"})}
 `
 //
 const InfoContainer = styled.div`
@@ -91,6 +96,7 @@ width: 100%;
 box-shadow: -7px 7px #E6D5B8;
 border: solid 1.5px #E6D5B8;
 ${mobile({ height: "100%"})}
+${tablet({ height: "100%"})}
 `
 //
 const ContentContainer = styled.div`
@@ -122,6 +128,12 @@ const Content = styled.div`
 padding: 20px 50px;
 background-color: #E6D5B8;
 ${mobile({ 
+  padding: "10px 25px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-around"
+   })}  
+   ${tablet({ 
   padding: "10px 25px",
   display: "flex",
   flexDirection: "column",
@@ -162,7 +174,12 @@ border: solid 1.5px #E6D5B8;
   padding: 20px;
   margin: 0 65px 20px 0;
   overflow: hidden;
-  ${mobile({ display: "none" })}   
+  ${mobile({ display: "none" })}  
+  ${tablet({ 
+    height: "100%",
+    width: "50%",
+    margin: "0"
+  })} 
 `
 //
 const TextOverlayBottom = styled.div`
@@ -206,6 +223,7 @@ height: ${props => props.height};
 filter: invert(100%);
 margin-top: 20px;
 ${mobile({ display: "none"})}
+${tablet({ display: "none"})}
 `
 //
 

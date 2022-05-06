@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import resume from "../assets/icons8-cv-64.png"
 import cv from "../downloads/cv.pdf"
 import { Link } from "react-scroll"
-import { mobile} from "../responsive"
+import { mobile, tablet} from "../responsive"
 //
 
 const Container = styled.div`
@@ -47,6 +47,7 @@ border-right: solid 1px white;
 display: flex;
 justify-content: space-around;
 ${mobile({ flex: "4" })}
+${tablet({ flex: "2" })}
 `
 
 const Right = styled.div`

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { keyframes } from 'styled-components'
 import { Link } from 'react-scroll'
-import { mobile} from "../responsive"
+import { mobile, tablet } from "../responsive"
 //
 import Navbar from "./Navbar"
 //
@@ -24,6 +24,7 @@ display: flex;
 padding: 3%;
 background-color: #1B1A17;
 ${mobile({ flexDirection: "column"})}
+${tablet({ flexDirection: "column"})}
 `
 //
 const Left = styled.div`
@@ -42,6 +43,7 @@ flex-direction: column;
 justify-content: space-between;
 align-items: flex-start;
 ${mobile({ alignItems: "center"})}
+${tablet({ alignItems: "center"})}
 `
 
 //TITLE ANIMATION
@@ -102,7 +104,8 @@ color: #FFBD35 ;
   animation: ${TitleAnimation} 2.3s infinite linear alternate-reverse;
   };
 
-  ${mobile({ fontSize: "60px"})}
+  ${mobile({ fontSize: "70px"})}
+  ${tablet({ fontSize: "110px"})}
 `
 //
 const HeaderTitleTwo = styled.h1`
@@ -127,7 +130,7 @@ color: #FFBD35 ;
 &:before { 
   content: attr(data-text);
   position: absolute;
-  left: px;
+  left: -5px;
   white-space: pre;
   text-shadow: 2px 0 #4E9F3D;
   color: #FFBD35 ;
@@ -137,7 +140,8 @@ color: #FFBD35 ;
   animation: ${TitleAnimation} 2.5s infinite linear alternate-reverse ;
   };
 
-  ${mobile({ fontSize: "60px"})}
+  ${mobile({ fontSize: "65px"})}
+  ${tablet({ fontSize: "100px"})}
 `
 //
 
@@ -150,6 +154,7 @@ const SubTitle = styled.h2`
     color:  #1B1A17;
     text-shadow: -2px 2px white;
     ${mobile({ fontSize: "20px"})}
+    ${tablet({ fontSize: "25px"})}
 `
 //
 const Right = styled.div`
@@ -164,6 +169,8 @@ ${mobile({ flex: "0.5" })}
 //
 const TextWrapper = styled.div`
 ${mobile({ display: "none"})}
+${tablet({ display: "none"})}
+
 `
 //
 const HeaderText = styled.div`
@@ -251,6 +258,11 @@ const IconContainer = styled.div`
     margin:"0",
     justifyContent: "center"
     })}
+      ${tablet({ 
+    width: "100%",
+    margin:"0",
+    justifyContent: "center"
+    })}
 `
 //
 const IconLeft = styled.div`
@@ -258,6 +270,7 @@ const IconLeft = styled.div`
 //
 const IconRight = styled.div`
 ${mobile({ display: "none"})}
+${tablet({ display: "none"})}
 `
 //
 const Icon = styled.img`
@@ -269,6 +282,8 @@ transition: all 0.5s ease-in-out;
 &:hover{
     transform:${props=>props.hoverscale} ;
 }
+
+${tablet({ margin: "0 30px"})}
 `
 //
 const A = styled.a`
