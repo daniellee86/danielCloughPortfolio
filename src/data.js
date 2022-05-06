@@ -31,7 +31,7 @@ export const images = [[cmain, cone, ctwo, cthree, cfour], [npmain, npone, nptwo
 export const sliderItems = [
   {
     id: 0,
-    url:["", "https://github.com/daniellee86/CLOBBA_Full-Stack_MERN"],
+    url:["https://clobba.herokuapp.com/", "https://github.com/daniellee86/CLOBBA_Full-Stack_MERN"],
     title: "CLOBBA",
     subtitle:"Full-Stack Ecommerce Web Application",
     desc: "FRONT: Reusable React Styled-Components, React Router, Responsive design.\nREST API: Express.JS + Node.JS router, encryption using Crypto.JS, JWT user verification.\nMIDDLE: Axios, Redux Tool-kit shopping cart and CRUD operations, complexed state management, session management.\nBACK: Mongoose, STRIPE, MongoDB, Google Firebase."
